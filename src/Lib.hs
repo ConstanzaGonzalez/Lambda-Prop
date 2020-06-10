@@ -82,4 +82,4 @@ mailsDePersonasInteresadas :: Depto -> [Persona] -> [Mail]
 mailsDePersonasInteresadas depto = map mail . filter (cumpleBusquedaPersona depto) 
 
 cumpleBusquedaPersona :: Depto -> Persona -> Bool
-cumpleBusquedaPersona depto persona = any (cumpleBusqueda depto) (busquedas persona)
+cumpleBusquedaPersona depto = any (cumpleBusqueda depto) . busquedas
